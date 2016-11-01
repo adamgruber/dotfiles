@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Better CoffeeScript",
+		"CodeFormatter",
+		"DashDoc",
+		"Diffy",
+		"Emmet",
+		"HTML Mustache",
+		"LESS",
+		"Lodash modules snippets",
+		"Markdown Preview",
+		"Oceanic Next Color Scheme",
+		"Package Control",
+		"Pretty YAML",
+		"Pug",
+		"React ES6 Snippets",
+		"Sass",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"Theme - Afterglow",
+		"Theme - itg.flat"
+	]
+}

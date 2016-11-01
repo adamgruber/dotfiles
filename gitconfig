@@ -1,0 +1,70 @@
+[user]
+	name = Adam Gruber
+	email = adam.gruber@dowjones.com
+[core]
+	quotepath = false
+	excludesfile = /Users/grubera/.gitignore_global
+[color]
+	ui = true
+[alias]
+	st = status -s -b
+	cl = clone
+	ci = commit
+	cm = commit -m
+	cma = commit -a -m
+	co = checkout
+  cod = checkout develop
+  com = checkout master
+  cp = cherry-pick
+	br = branch
+  	pr = pull --rebase
+  	pod = pull origin develop
+  	prod = pull --rebase origin develop
+	#list commands
+	le = log --oneline --decorate
+    ll = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
+    ls1 = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
+    lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=relative
+    lc  = "!f() { git ll "$1"^.."$1"; }; f"
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    #list all aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+
+    #stash
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    sp = stash pop
+
+  #gitflow
+  fi = flow init -d
+  
+  ff = flow feature
+  ffl = flow feature list
+  ffs = flow feature start
+  fff = flow feature finish
+  ffp = flow feature publish
+  fft = flow feature track
+  ffd = flow feature diff
+  ffr = flow feature rebase
+  
+  fr = flow release
+  frl = flow release list
+  frs = flow release start
+  frf = flow release finish
+  frp = flow release publish
+  frt = flow release track
+
+  fh = flow hotfix
+  fhs = flow hotfix start
+  fhf = flow hotfix finish
+  fhp = flow hotfix publish
+  fht = flow hotfix track
+
+[credential]
+	helper = osxkeychain
+[url "https://"]
+	insteadOf = git://
+[push]
+	default = simple

@@ -1,0 +1,20 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Specials Board Next (SL).tmTheme",
+	"detect_indentation": false,
+	"fade_fold_buttons": false,
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		100
+	],
+	"status_bar_brighter": true,
+	"tab_size": 2,
+	"tabs_padding_small": true,
+	"tabs_small": true,
+	"theme": "Afterglow-orange.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
