@@ -1,0 +1,9 @@
+{
+  // Output profiles for syntaxes
+  // http://docs.emmet.io/customization/syntax-profiles/
+  "syntaxProfiles": {
+    "jsx": {
+      "attr_quotes": "single"
+    }
+  }
+}
