@@ -25,6 +25,7 @@ export PS1="${DKGREY}\u: ${LTGREY}\w \[$txtcyn\]\${git_branch}\[$txtred\]\${git_
 # Command aliases
 alias g=git
 alias ls='ls -GFh'
+alias ll='ls -al'
 alias npms='cat package.json | jq .scripts'
 alias npmbin='$(npm bin)'
 
