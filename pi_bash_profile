@@ -6,10 +6,6 @@ fi
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-export GEM_HOME="$HOME/.gems"
-export PATH="$PATH:$GEM_HOME/bin"
-
-
 # Custom colors
 DKGREY="\[\e[30;1m\]"
 LTGREY="\[\e[37;1m\]"
@@ -24,12 +20,10 @@ export PS1="${DKGREY}\u: ${LTGREY}\w \[$txtcyn\]\${git_branch}\[$txtred\]\${git_
 
 # Command aliases
 alias g=git
-alias ls='ls -GFh'
-alias ll='ls -al'
-alias npms='cat package.json | jq .scripts'
-alias npmbin='$(npm bin)'
+alias ls='ls -GFh --color=auto'
+alias ll='ls -al --color=auto'
+#alias npms='cat package.json | jq .scripts'
+#alias npmbin='$(npm bin)'
 
-#export NVM_DIR="/Users/adamgruber/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$HOME/.yarn/bin:$PATH"
+export NODEJS_HOME=/usr/local/lib/nodejs/node-v8.10.0
+export PATH=$NODEJS_HOME/bin:$PATH
