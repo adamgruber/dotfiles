@@ -1,27 +1,28 @@
 [user]
-	name = Adam Gruber
-	email = adam.gruber@dowjones.com
+  name = Adam Gruber
+  email = talknmime@me.com
 [core]
-	quotepath = false
-	excludesfile = /Users/grubera/.gitignore_global
+  quotepath = false
+  excludesfile = ~/.gitignore_global
 [color]
-	ui = true
+  ui = true
 [alias]
-	st = status -s -b
-	cl = clone
-	ci = commit
-	cm = commit -m
-	cma = commit -a -m
-	co = checkout
+  st = status -s -b
+  cl = clone
+  ci = commit
+  cm = commit -m
+  cma = commit -a -m
+  co = checkout
   cod = checkout develop
   com = checkout master
   cp = cherry-pick
-	br = branch
-  	pr = pull --rebase
-  	pod = pull origin develop
-  	prod = pull --rebase origin develop
-	#list commands
-	le = log --oneline --decorate
+  br = branch
+  pr = pull --rebase
+  pod = pull origin develop
+  prod = pull --rebase origin develop
+
+  #list commands
+  le = log --oneline --decorate
     ll = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
     ls1 = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
     lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=short --graph
@@ -36,6 +37,17 @@
     sa = stash apply
     ss = stash save
     sp = stash pop
+    sh = !sh -c 'git stash show stash@{$1}' -
+    shp = !sh -c 'git stash show stash@{$1} -p' -
+    sd = !sh -c 'git stash drop stash@{$1}' -
+
+  # show changes since last tag
+  tagchanges = !git ls `git lasttag`...
+  # get the last tag
+  lasttag = describe --tags --abbrev=0
+
+  # publish current branch to origin
+  pub = "!git push -u origin $(git branch | grep \\* | cut -d ' ' -f2)"
 
   #gitflow
   fi = flow init -d
@@ -63,8 +75,11 @@
   fht = flow hotfix track
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
 [push]
-	default = simple
+  default = simple
+[pager]
+  stash = false
+  diff = false
